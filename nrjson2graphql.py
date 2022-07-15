@@ -19,7 +19,7 @@ class JsonGraphQLConverter:
         return re.sub('(accountId: )\d*,', 'accountId: ' + account_placeholder, string)
 
     def title_render(self, string):
-        return re.sub('name: .*', f"name: '{dashboard_title}'", string, 1)
+        return re.sub('name: .*', f'name: "{dashboard_title}"', string, 1)
 
     def project_placeholding(self, string):
         return re.sub("project like '(.*)'", f"project like '{project_placeholder}'", string)

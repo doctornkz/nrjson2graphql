@@ -9,6 +9,8 @@ Details : https://github.com/doctornkz/newrelicUploader
 Processing JSON as a simple string, escaping double quotes, adding GraphQL mutation header.
 
 ### How to use:
+Export dashboard from NewRelic WEB UI as a Json. By default it goes to clipboard, so just paste it to a file.
+Run the tool with file name as parameter:
 
 ```
 $ /usr/bin/python3 nrjson2graphql/nrjson2graphql.py tests/dashboard1.json
