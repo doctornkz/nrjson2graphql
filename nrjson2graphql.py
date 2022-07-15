@@ -1,10 +1,12 @@
 import re
 import sys
+from xxlimited import foo
 
 # Global place holders:
 account_placeholder = 'ACCOUNT_PLACE_HOLDER'
 project_placeholder = 'PROJECT_PLACE_HOLDER'
 dashboard_title = 'Load Tests [' + project_placeholder + ']'
+permissions = 'PUBLIC_READ_WRITE'
 
 
 class JsonGraphQLConverter:
@@ -24,9 +26,21 @@ class JsonGraphQLConverter:
     def project_placeholding(self, string):
         return re.sub("project like '(.*)'", f"project like '{project_placeholder}'", string)
 
-    def header(self, body_json):
+    def header(self, body):
+
+        body_with_access = re.sub('permissions: .*', f"permissions: {permissions}", body)
+
         header = f'mutation {{dashboardCreate(accountId: {account_placeholder}, dashboard:'
-        return header + body_json + '\n}'
+        footer = ''') 
+    {
+    entityResult {
+      guid
+      }
+    }
+ }
+  '''
+
+        return header + body_with_access + footer
 
 if __name__ == "__main__":
 
