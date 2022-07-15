@@ -1,6 +1,8 @@
 # nrjson2graphql
 
-### Dashboard JSON converter. Helps to use existing Dashboard as a template for newRelicUploader Taurus plugin.
+### Dashboard JSON converter. 
+
+Helps to use existing Dashboard as a template for newRelicUploader Taurus plugin.
 Details : https://github.com/doctornkz/newrelicUploader
 
 ### Mechanic
