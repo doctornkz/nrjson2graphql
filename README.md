@@ -15,9 +15,9 @@ Run the tool with file name as parameter:
 ```
 $ /usr/bin/python3 nrjson2graphql/nrjson2graphql.py tests/dashboard1.json
 mutation {dashboardCreate(accountId: ACCOUNT_PLACE_HOLDER, dashboard:{
-    name: 'Load Tests [PROJECT_PLACE_HOLDER]'
+    name: "Load Tests [PROJECT_PLACE_HOLDER]"
     description: null,
-    permissions: "PUBLIC_READ_WRITE",
+    permissions: PUBLIC_READ_WRITE,
     pages: [
       {
         name: "One Page to Rule Them All",
