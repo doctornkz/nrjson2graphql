@@ -1,6 +1,5 @@
 import re
 import sys
-from xxlimited import foo
 
 # Global place holders:
 account_placeholder = 'ACCOUNT_PLACE_HOLDER'
