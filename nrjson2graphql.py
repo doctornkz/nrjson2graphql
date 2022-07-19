@@ -24,7 +24,7 @@ class JsonGraphQLConverter:
         return re.sub('name: .*', f'name: "{dashboard_title}"', string, 1)
 
     def project_placeholding(self, string):
-        return re.sub("project like '(.*)'", f"project like '{project_placeholder}'", string)
+        return re.sub("project like '(.*)' ", f"project like '{project_placeholder}'", string)
 
     def header(self, body):
 
